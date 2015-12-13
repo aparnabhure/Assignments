@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="assignment.android.com.assignment.FriendInfoActivityFragment"
+    tools:showIn="@layout/activity_friend_info">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rightLayout">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/phone"
+                android:id="@+id/iv_makeCall"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/email"
+                android:id="@+id/iv_sendMail"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/contact_url"
+            android:id="@+id/iv_contacturl" android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rightLayout"
+            android:layout_toRightOf="@+id/iv_contacturl"
+            style="@style/headline"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:id="@+id/tv_name"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/iv_photo"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+</RelativeLayout>
